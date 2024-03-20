@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class PutDogController(private val dogRepository: DogRepository) {
 
-    @PutMapping("/put/{name}")
+    @PutMapping("/put/{name}/")
     fun updateDog(@PathVariable name: String,
                   @RequestParam("newName") newName: String?,
                   @RequestParam("breed") breed: String?,
